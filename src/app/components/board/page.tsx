@@ -5,12 +5,16 @@ import BoardWrite from "@/app/components/board/write/page";
 import BoardView from "@/app/components/board/view/page";
 
 import { useSearchParams } from 'next/navigation'
+import { useRouter } from 'next/router'
 
 export default function Board() {
 	const searchParams = useSearchParams()
-	console.log(searchParams)
-  const mode = searchParams.get('mode')
-  console.log(mode)
+  let mode = searchParams.get('mode')
+	mode = mode === null ? 'list' : mode
+	console.log(mode);
+
+	let router = useRouter();
+	console.log(router);
 
 	return (
 		<>

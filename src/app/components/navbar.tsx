@@ -5,7 +5,7 @@ export default function Navbar() {
 				<div className="container-fluid my-3">
 					<ul className="flex">
 						<li className="mx-3">
-							<a href="/">Navbar</a>
+							<a href="/">Home</a>
 						</li>
 						<li className="mx-3">
 							<a href="/notice">Notice</a>
