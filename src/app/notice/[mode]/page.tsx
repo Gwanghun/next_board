@@ -1,16 +1,13 @@
 import Board from "@/app/components/board/page";
 
-export default function Page() {
-	/*const router = useRouter();
-	console.log(router);*/
+export default function Page(props: any) {
+	const mode = props.params.mode;
+	console.log(mode);
 
 	return (
 		<>
-			<div className="flex min-h-screen flex-col items-center justify-between p-24">
-				<p>
-					Page
-				</p>
-				<Board />
+			<div className="flex min-h-screen flex-col items-center justify-between">
+				<Board mode={mode} />
 			</div>
 		</>
 	)

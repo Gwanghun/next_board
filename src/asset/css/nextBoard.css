@@ -1,0 +1,13 @@
+/*게시판 글쓰기*/
+.writeForm {
+    @apply flex flex-col items-center w-full;
+}
+.writeForm > .tr {
+    @apply py-2 w-full;
+}
+.writeForm .boardTitle {
+    @apply w-full p-3;
+}
+.writeForm .boardContent {
+    @apply w-full h-64 p-3;
+}

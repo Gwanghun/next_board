@@ -1,24 +1,14 @@
-'use client'
-
 import BoardList from "@/app/components/board/list/page";
 import BoardWrite from "@/app/components/board/write/page";
 import BoardView from "@/app/components/board/view/page";
 
-import { useSearchParams } from 'next/navigation'
-import { useRouter } from 'next/router'
-
-export default function Board() {
-	const searchParams = useSearchParams()
-  let mode = searchParams.get('mode')
-	mode = mode === null ? 'list' : mode
-	console.log(mode);
-
-	let router = useRouter();
-	console.log(router);
-
+import "@/asset/css/nextBoard.css";
+// export default function Board({mode}: {mode:string}) {
+export default function Board(props: any) {
+	const mode = props.mode;
 	return (
 		<>
-			<div>
+			<div className="flex flex-col items-center justify-between w-full">
 			{
 				mode === 'list' ? <BoardList /> : null
 			}
