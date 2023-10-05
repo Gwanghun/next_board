@@ -5,7 +5,7 @@ import BoardView from "@/app/components/board/view/page";
 import "@/asset/css/nextBoard.css";
 // export default function Board({mode}: {mode:string}) {
 export default function Board(props: any) {
-	const mode = props.mode;
+	const mode = ( props.mode === undefined ) ? 'list' : props.mode
 	return (
 		<>
 			<div className="flex flex-col items-center justify-between w-full">
