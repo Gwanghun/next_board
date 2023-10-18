@@ -1,21 +1,22 @@
 'use client';
 export default function BoardList() {
-	function clickTest() {
-		fetch('/api/newPost', {
+	async function clickTest() {
+		const resultData = await fetch('/api/newPost', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			body: JSON.stringify({ message: 'Hello from Next.js!' })
+			body: JSON.stringify({message: 'Hello from Next.js!'})
 		}).then((res) => {
 			console.log(res);
 			if (res.ok) {
-
-				return res.json()
+				return res.json();
 			} else {
 				throw new Error('Something went wrong')
 			}
 		})
+
+		console.log(resultData);
 	}
 
 	return (
