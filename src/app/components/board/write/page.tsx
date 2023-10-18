@@ -1,10 +1,12 @@
+'use client';
 export default function BoardWrite() {
 	function newPost() {
-		alert('글 등록');
-		/*let objectWithData = {
-			title: document.querySelector('.boardTitle').value,
-			content: document.querySelector('.boardContent').value,
-		}
+		console.log('글 등록');
+		let objectWithData: { title: any; content: any };
+		objectWithData = {
+			content: document.querySelector(".boardContent").value,
+			title: document.querySelector(".boardTitle").value,
+		};
 		fetch('/api/newPost', {
 			method: 'POST',
 			headers: {
@@ -13,11 +15,7 @@ export default function BoardWrite() {
 			body: JSON.stringify(objectWithData),
 		}).then(r => r.json()).then(data => {
 			console.log(data);
-		});*/
-	}
-
-	function funcText() {
-		alert('글 등록');
+		});
 	}
 
 	return (
@@ -39,7 +37,7 @@ export default function BoardWrite() {
 						<button
 							type="button"
 							className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-							onClick={funcText}
+							onClick={newPost}
 						>
 							글 등록
 						</button>
