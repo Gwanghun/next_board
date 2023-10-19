@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9244146c-1e9b-4016-8a0f-210d558ab341" name="변경" comment="api 호출 작업">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/newPost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/newPost.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/board/list/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/board/list/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/board/write/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/board/write/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/nextBoard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/nextBoard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/database.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/database.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,12 +53,13 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "D:\\Study\\Workspace\\next_board\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Workspace\\next_board\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Workspace\next_board\src" />
       <recent name="D:\Study\Workspace\next_board" />
     </key>
   </component>

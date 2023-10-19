@@ -1,32 +1,21 @@
 'use client';
-export default function BoardList() {
-	async function clickTest() {
-		const resultData = await fetch('/api/newPost', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify({message: 'Hello from Next.js!'})
-		}).then((res) => {
-			console.log(res);
-			if (res.ok) {
-				return res.json();
-			} else {
-				throw new Error('Something went wrong')
-			}
-		})
+import Link from "next/link";
+import {useRouter, usePathname} from "next/navigation";
 
-		console.log(resultData);
-	}
+
+export default function BoardList() {
+	const thisPathname: string = usePathname();
+	let thisPage: string;
+	thisPage = (thisPathname.split('/'))[1];
 
 	return (
 		<>
 			<div className="flex flex-col items-center justify-between p-24">
 				Board List Page
 
-				<button type={"button"} onClick={clickTest}>
+				<Link href={"/"+thisPage+"/write"}>
 					글쓰기
-				</button>
+				</Link>
 			</div>
 		</>
 	)

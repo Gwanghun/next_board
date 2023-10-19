@@ -1,4 +1,4 @@
-import { connectDB } from "../../util/database";
+// import { connectDB } from "@/util/database";
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type ResponseData = {
@@ -6,10 +6,11 @@ type ResponseData = {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<ResponseData>) {
-  let client = await connectDB;
-  const db = client.db('forum');
+  /*let client = await connectDB;
+  console.log(client);*/
+  /*const db = client.db('forum');
   let result = await db.collection('post').find().toArray();
-  console.log(result);
+  console.log(result);*/
 
   if (req.method === 'POST') {
     const {title, content} = req.body;

@@ -4,15 +4,16 @@ import {FormEvent} from "react";
 export default function BoardWrite() {
 	async function newPost(event: FormEvent<HTMLFormElement>) {
 		event.preventDefault();
-		console.log( event.currentTarget );
-		console.log( event.currentTarget.boardTitle.value );
+		const element = event.currentTarget;
+		console.log( element.boardTitle.value );
+		console.log( element.boardContent.value );
 
-		/*const content = document.querySelector(".boardContent").value;
+
 
 		let objectWithData: { title: any; content: any };
 		objectWithData = {
-			content: document.querySelector(".boardContent").value,
-			title: document.querySelector(".boardTitle").value,
+			title: element.boardTitle.value,
+			content: element.boardContent.value,
 		};
 		fetch('/api/newPost', {
 			method: 'POST',
@@ -22,7 +23,7 @@ export default function BoardWrite() {
 			body: JSON.stringify(objectWithData),
 		}).then(r => r.json()).then(data => {
 			console.log(data);
-		});*/
+		});
 	}
 
 	return (
@@ -32,7 +33,7 @@ export default function BoardWrite() {
 			</div>
 			<div className="w-full p-5">
 				<div className="writeForm">
-					<form onSubmit={newPost}>
+					<form onSubmit={newPost} className="w-full">
 						<div className="tr">
 							<input type="text" className="boardTitle" name="boardTitle" placeholder="제목" minLength={3} required />
 						</div>
